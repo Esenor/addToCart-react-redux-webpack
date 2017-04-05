@@ -1,7 +1,7 @@
 ## Install ##
 
     npm install
-    npm start
+    npm run dev-server
     
 > Open http://localhost:8044
 
