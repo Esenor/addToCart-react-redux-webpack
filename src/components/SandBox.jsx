@@ -1,4 +1,6 @@
 import React from 'react';
+import ProductList from '../components/ProductList.jsx';
+import {Cart} from '../containers/Cart';
 
 /**
  * React SandBox components
@@ -19,10 +21,13 @@ class SandBox extends React.Component {
    * SandBox render method
    * @return {object}
    */
-  render () {    
+  render () {
+    let humanizedProps = JSON.stringify(this.props.cartData, null, 2);
     return (
       <div id="reactApp">
-        cart redux
+        <ProductList />
+        <Cart />
+        <pre>{humanizedProps}</pre>
       </div>
     );
   }

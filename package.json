@@ -1,7 +1,7 @@
 {
-  "name": "react_todolist",
+  "name": "react_redux_cart",
   "version": "1.0.0",
-  "description": "Simple ToDo list application with React, Babel and Webpack",
+  "description": "Cart demo application with React and redux",
   "main": "index.js",
   "scripts": {
     "dev": "webpack -d --watch",
@@ -14,7 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
