@@ -1,16 +1,12 @@
-# React Es6 Babel Application #
+## Install ##
 
-Simple ToDo list application project with React, Webpack and Babel.
-
-    docker-compose -f docker/docker-compose_dev.yml build
-    docker-compose -f docker/docker-compose_dev.yml up -d
+    npm install
+    npm start
     
-> Open http://{dockerhost}:8044
+> Open http://localhost:8044
 
 ## Build webpack bundle ##
 
-file will be created in /static/bundle.js
-
-> Inside container
+file will be created in /static/
 
     npm run build
