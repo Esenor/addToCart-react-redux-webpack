@@ -1,0 +1,4 @@
+node_modules
+static/app.js
+static/vendors.js
+test/test-results.xml

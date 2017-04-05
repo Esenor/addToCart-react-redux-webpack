@@ -1,0 +1,8 @@
+{
+  "library": {
+    "name": "ReduxCart"
+  },
+  "build": {
+    "name": "bundle.js"
+  }
+}

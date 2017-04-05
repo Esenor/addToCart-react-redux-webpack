@@ -1,0 +1,65 @@
+$greyColor: #444;
+@mixin field {
+    border: 1px solid $greyColor;
+    padding: 5px;
+}
+#reactApp {
+  color: $greyColor;
+  width: 700px;
+  margin: 20px auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  
+  .data-logger {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    margin-bottom: 2px;
+    @include field;
+  }
+    
+  button {
+    vertical-align: top;
+    cursor: pointer;
+    @include field;
+        
+    &.delete-button {
+      margin: 0px;
+      padding: 0px 1px;
+      vertical-align: bottom;
+    }
+  }
+    
+  .editable {
+    cursor: pointer;
+    transition: 0.4s all;
+        
+    &.empty {
+      &:before {
+        content: '...';
+      }
+    }
+        
+    &:hover {
+      background: #c9e6f2;
+    }
+  }
+    
+  ol {
+    padding-left: 10px;
+    
+    li {
+      margin-bottom: 10px;
+      
+      &.done {
+        text-decoration: line-through;
+      }
+      
+      button.delete-button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
