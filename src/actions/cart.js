@@ -1,9 +1,9 @@
-import * as cartInterfaces from '../interfaces/cart';
+import * as cartInterfaces from '../interfaces/cart'
 /**
  * [addProduct description]
  * @param {[type]} product [description]
  */
- export function addProduct (product) {
+export function addProduct (product) {
   return {
     type: cartInterfaces.ADD_PRODUCT,
     payload: {
