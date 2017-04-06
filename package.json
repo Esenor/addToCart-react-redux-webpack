@@ -13,8 +13,6 @@
     "pretest": "npm run lint",
     "test": "mocha",
     "pretestJunit": "npm run lint",
-    "pregit": "npm run test",
-    "git": "git push",
     "testJunit": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=test/test-results.xml"
   },
   "author": "",
