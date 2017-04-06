@@ -7,6 +7,6 @@
 
 ## Build webpack bundle ##
 
-file will be created in /static/
+tar.gz file will be created in /dist/
 
     npm run build
