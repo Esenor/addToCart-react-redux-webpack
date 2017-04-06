@@ -1,4 +1,5 @@
 node_modules
+dist.tar.gz
 static/app.js
 static/vendors.js
 test/test-results.xml

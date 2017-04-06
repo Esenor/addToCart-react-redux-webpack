@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack -d --watch",
     "dev-server": "webpack-dev-server --inline --hot --watch --host 0.0.0.0 --port 8044",
-    "build": "webpack -p",
+    "build": "webpack -p && cd static && tar cvf ../dist/dist.tar.gz *",
     "test": "mocha",
     "testJunit": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=test/test-results.xml"
   },
