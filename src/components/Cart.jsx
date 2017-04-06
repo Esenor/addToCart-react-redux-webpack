@@ -27,7 +27,7 @@ class Cart extends React.Component {
     });
     return (
       <section>
-        <header>Cart: {qty} {common.itemHumanized(qty)}</header>
+        <header>Cart: {qty} {common.wordHumanized(qty, 'product', 'products')}</header>
         <div>{cartList}</div>
         <strong className="mapadding">Total Price: {this.props.cartData.totalPrice} €</strong>
       </section>

@@ -1,5 +1,5 @@
 module.exports = {
-  itemHumanized: function (qty) {
-    return (qty > 1) ? 'items' : 'item';
+  wordHumanized: function (qty, singular, plural) {
+    return (qty > 1) ? plural : singular;
   }
 }

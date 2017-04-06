@@ -50,8 +50,10 @@ class CartItem extends React.Component {
           </div>
         </section>
         <section>
-          <input type="number" value={this.props.product.qty} onChange={this.qtyChanged}/>
-          <i>{common.itemHumanized(this.props.product.qty)}</i>
+          <div>
+            <input type="number" value={this.props.product.qty} onChange={this.qtyChanged}/>
+            <i>{common.wordHumanized(this.props.product.qty, 'item', 'items')}</i>
+          </div>
           <button onClick={this.removeProduct}>remove product</button>
         </section>
       </article>
