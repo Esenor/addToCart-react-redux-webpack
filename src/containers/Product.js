@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import ProductComponent from '../components/Product.jsx';
-import {addProduct} from '../actions';
+import {addProduct} from '../actions/cart';
 
 export const Product = connect(
   function mapStateToProps (state) {

@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import CartItemComponent from '../components/CartItem.jsx';
-import {updateQty, removeProduct} from '../actions';
+import {updateQty, removeProduct} from '../actions/cart';
 
 export const CartItem = connect(
   function mapStateToProps (state) {

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Product} from '../containers/Product'
+import {Product} from '../containers/Product';
+import rawProductList from '../../config/productList.json';
 
 /**
  * React ProductList components
@@ -20,24 +21,7 @@ class ProductList extends React.Component {
    * @return {object}
    */
   render () {
-    var products = [
-      {
-        productId: 'PRD-14_store-californien',
-        productName: 'Store californien',
-        unitPrice: 49
-      },
-      {
-        productId: 'PRD-17_kit-de-rnovation-bandes-seules',
-        productName: 'Kit de rénovation bandes seules',
-        unitPrice: 15
-      },
-      {
-        productId: 'PRD-26_rideau-voilage',
-        productName: 'Rideau voilage',
-        unitPrice: 25
-      }
-    ];
-    let productList = products.map(function (product) {
+    let productList = rawProductList.map(function (product) {
       return (
         <Product key={product.productId} product={product}/>
       );

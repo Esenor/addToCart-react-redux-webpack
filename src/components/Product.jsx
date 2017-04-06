@@ -27,6 +27,9 @@ class Product extends React.Component {
     return (
       <article>
         <section>
+          <img src={this.props.product.picture} />
+        </section>
+        <section>
           <strong>{this.props.product.productName}</strong>
           <div>
             <small>{this.props.product.productId}</small>

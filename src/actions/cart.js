@@ -1,18 +1,16 @@
-export const ADD_PRODUCT = 'ADD_PRODUCT';
-export const UPDATE_QTY = 'UPDATE_QTY';
-export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
-
+import * as cartInterfaces from '../interfaces/cart';
 /**
  * [addProduct description]
  * @param {[type]} product [description]
  */
-export function addProduct (product) {
+ export function addProduct (product) {
   return {
-    type: ADD_PRODUCT,
+    type: cartInterfaces.ADD_PRODUCT,
     payload: {
       productId: product.productId,
       productName: product.productName,
       unitPrice: product.unitPrice,
+      picture: product.picture,
       qty: 1
     }
   }
@@ -26,7 +24,7 @@ export function addProduct (product) {
  */
 export function updateQty (productId, qty) {
   return {
-    type: UPDATE_QTY,
+    type: cartInterfaces.UPDATE_QTY,
     payload: {
       productId: productId,
       qty: qty
@@ -41,7 +39,7 @@ export function updateQty (productId, qty) {
  */
 export function removeProduct (productId) {
   return {
-    type: REMOVE_PRODUCT,
+    type: cartInterfaces.REMOVE_PRODUCT,
     payload: {
       productId: productId
     }

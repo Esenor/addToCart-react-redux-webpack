@@ -22,12 +22,14 @@ class SandBox extends React.Component {
    * @return {object}
    */
   render () {
-    let humanizedProps = JSON.stringify(this.props.cartData, null, 2);
     return (
       <div id="reactApp">
-        <ProductList />
-        <Cart />
-        <pre>{humanizedProps}</pre>
+        <div className="container">
+          <ProductList />
+        </div>
+        <div className="container">
+          <Cart />
+        </div>
       </div>
     );
   }

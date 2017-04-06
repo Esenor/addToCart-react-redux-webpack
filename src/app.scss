@@ -3,13 +3,34 @@
   margin: 10px;
 }
 #reactApp {
+  display: flex;
+  button {
+    cursor: pointer;
+  }
   header {
     background: #a1a1a1;
+    min-width: 330px;
     @include mapadding;
   }
   article {
     @include mapadding;
     border: 1px solid grey;
+    display: flex;
+    section {
+      &:nth-child(1) {
+        width: 80px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      &:nth-child(2) {
+        width: 150px;
+      }
+      &:nth-child(3) {
+        button {
+          margin-top: 10px;
+        }
+      }
+    }
   }
   .mapadding {
     @include mapadding;
@@ -17,5 +38,13 @@
   input[type="number"] {
     width: 40px;
     margin-right: 5px;
+  }
+  .container {
+    &:nth-child(2) {
+      margin-left: 100px;
+      article {
+        border: 1px solid coral;
+      }
+    }
   }
 }

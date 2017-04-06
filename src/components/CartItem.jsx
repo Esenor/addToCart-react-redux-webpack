@@ -1,4 +1,5 @@
 import React from 'react';
+import common from '../common';
 
 /**
  * React CartItem components
@@ -34,11 +35,11 @@ class CartItem extends React.Component {
    * @return {object}
    */
   render () {
-    function itemHumanized (qty) {
-      return (qty > 1) ? 'items' : 'item';
-    }
     return (
       <article>
+        <section>
+          <img src={this.props.product.picture} />
+        </section>
         <section>
           <strong>{this.props.product.productName}</strong>
           <div>
@@ -47,13 +48,11 @@ class CartItem extends React.Component {
           <div>
             <i>{this.props.product.unitPrice} €/µ</i>
           </div>
-          <div>
-            <input type="number" value={this.props.product.qty} onChange={this.qtyChanged}/>
-            <i>{itemHumanized(this.props.product.qty)}</i>
-          </div>
-          <div>
-            <button onClick={this.removeProduct}>remove product</button>
-          </div>
+        </section>
+        <section>
+          <input type="number" value={this.props.product.qty} onChange={this.qtyChanged}/>
+          <i>{common.itemHumanized(this.props.product.qty)}</i>
+          <button onClick={this.removeProduct}>remove product</button>
         </section>
       </article>
     );

@@ -1,6 +1,5 @@
-import {ADD_PRODUCT, UPDATE_QTY, REMOVE_PRODUCT} from '../actions';
-import {addProduct, updateQty, removeProduct} from '../actions';
-import {addProductToCart, updateProductQty, removeProductToCart} from './cart';
+import * as cartInterfaces from '../interfaces/cart';
+import * as cartReducers from './cart';
 
 const initialState = {
   products: [],
@@ -25,12 +24,12 @@ function immutableState (state, newState) {
  */
 export default function (state = initialState, action) {
   switch (action.type) {
-    case ADD_PRODUCT:
-      return immutableState(state, addProductToCart(state, action));
-    case UPDATE_QTY:
-      return immutableState(state, updateProductQty(state, action));
-    case REMOVE_PRODUCT:
-      return immutableState(state, removeProductToCart(state, action));
+    case cartInterfaces.ADD_PRODUCT:
+      return immutableState(state, cartReducers.addProductToCart(state, action));
+    case cartInterfaces.UPDATE_QTY:
+      return immutableState(state, cartReducers.updateProductQty(state, action));
+    case cartInterfaces.REMOVE_PRODUCT:
+      return immutableState(state, cartReducers.removeProductToCart(state, action));
     default:
       return state;
   }
