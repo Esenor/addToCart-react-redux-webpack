@@ -3,3 +3,6 @@ dist.tar.gz
 static/app.js
 static/vendors.js
 test/test-results.xml
+yarn-error.log
+npm-error.log
+yarn.lock

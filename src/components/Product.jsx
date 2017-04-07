@@ -1,22 +1,21 @@
-import React from 'react';
+import React from 'react'
 
 /**
  * React Product components
  * This component is the application wrapper
  */
 class Product extends React.Component {
-  
   /**
    * Product constructor
    * @param  {object} props
    */
   constructor (props) {
-    super(props);
-    this.addToCart = this.addToCart.bind(this);
+    super(props)
+    this.addToCart = this.addToCart.bind(this)
   }
 
   addToCart () {
-    this.props.addProductToCart(this.props.product);
+    this.props.addProductToCart(this.props.product)
   }
 
   /**
@@ -42,7 +41,7 @@ class Product extends React.Component {
           <button onClick={this.addToCart}>Add to cart</button>
         </section>
       </article>
-    );
+    )
   }
 }
 
@@ -50,4 +49,4 @@ class Product extends React.Component {
  * Export Product container
  * @type {Product}
  */
-module.exports = Product;
+module.exports = Product

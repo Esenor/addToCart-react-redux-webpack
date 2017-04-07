@@ -7,7 +7,7 @@
     "dev": "webpack -d --watch",
     "dev-server": "webpack-dev-server --inline --hot --watch --host 0.0.0.0 --port 8044",
     "start": "npm run dev-server",
-    "lint": "eslint src",
+    "lint": "eslint --ext .js src --ext .jsx src",
     "prebuild": "npm run test",
     "build": "webpack -p && cd static && tar cvf ../dist/dist.tar.gz *",
     "pretest": "npm run lint",

@@ -1,33 +1,32 @@
-import React from 'react';
-import common from '../common';
+import React from 'react'
+import common from '../common'
 
 /**
  * React CartItem components
  * This component is the application wrapper
  */
 class CartItem extends React.Component {
-  
   /**
    * CartItem constructor
    * @param  {object} props
    */
   constructor (props) {
-    super(props);
-    this.qtyChanged = this.qtyChanged.bind(this);
-    this.removeProduct = this.removeProduct.bind(this);
+    super(props)
+    this.qtyChanged = this.qtyChanged.bind(this)
+    this.removeProduct = this.removeProduct.bind(this)
   }
 
   removeProduct () {
-    this.props.remove(this.props.product.productId);
+    this.props.remove(this.props.product.productId)
   }
-  
+
   qtyChanged (event) {
-    var regexNumber = /^\d*[1-9]\d*$/;
+    var regexNumber = /^\d*[1-9]\d*$/
     if (!regexNumber.test(event.target.value)) {
-      event.target.value = 1;
+      event.target.value = 1
     }
-    var newQty = event.target.value;
-    this.props.changeQty(this.props.product.productId, parseInt(newQty));
+    var newQty = event.target.value
+    this.props.changeQty(this.props.product.productId, parseInt(newQty))
   }
 
   /**
@@ -57,7 +56,7 @@ class CartItem extends React.Component {
           <button onClick={this.removeProduct}>remove product</button>
         </section>
       </article>
-    );
+    )
   }
 }
 
@@ -65,4 +64,4 @@ class CartItem extends React.Component {
  * Export CartItem container
  * @type {CartItem}
  */
-module.exports = CartItem;
+module.exports = CartItem
